@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <p onmouseover="this.style.backgroundColor='orange'">해피 할로윈 데이!</p>
+    <script>
+      var p = document.getElementsByTagName('p')[0];
+      //함수 쓰지않기 호출이 아닌 등록
+      //익명함수
+      p.addEventListener("mouseout",function(){this.style.backgroundColor="white"})
+      
+    //   function out(){
+    //       this.style.backgroundColor="white";
+    //   }
+    </script>
+
+</body>
+</html>

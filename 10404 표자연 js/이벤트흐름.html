@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML DOM 트리</title>
+
+</head>
+
+<body>
+    <p style="color:blue">이것은
+        <span style="color:red" id="mySpan">문장입니다.</span>
+    </p>
+
+    <form>
+        <input type="text">
+        <input type="button" value="테스트">
+        <hr>
+    </form>
+    <script>
+    
+      
+    document.getElementsByTagName("input")[1].addEventListener("click",bubble,true);
+    document.getElementsByTagName("form")[0].addEventListener("click",bubble);
+    function bubble(e){
+        alert(e.currentTarget);
+
+    }
+    </script>
+</body>
+
+</html>

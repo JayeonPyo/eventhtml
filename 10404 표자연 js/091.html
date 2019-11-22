@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+
+  
+</head>
+<body>
+        
+        
+        <h1>방학까지 남은 날짜</h1>
+    <script>
+    
+//     var byear = parseInt(prompt("태어난 년도는?" ));
+//     var bmon = parseInt(prompt("태어난 월은?" ));
+//     var bday = parseInt(prompt("태어난 일은?" ));
+//     var bth = new Date(byear, bmon-1, bday);
+
+
+//     var byear = bth.getFullYear();
+   
+//     var bm = bth.getDay();
+
+//     document.write("당신의 생일은 몇 월: " + bmon);
+//     document.write('</br>');
+//     document.write("당신의 생일은 몇 일: " + bday);
+//     document.write('</br>');
+
+//     //일요일이 >> 0 
+//    switch(bm){
+//        case 1 : document.write("당신의 생일은 무슨 요일: 월요일");
+//        break;
+//        case 2 : document.write("당신의 생일은 무슨 요일: 화요일");
+//        break;
+//        case 3 : document.write("당신의 생일은 무슨 요일: 수요일");
+//        break;
+//        case 4 : document.write("당신의 생일은 무슨 요일: 목요일");
+//        break;
+//        case 5 : document.write("당신의 생일은 무슨 요일: 금요일");
+//        break;
+//        case 6 : document.write("당신의 생일은 무슨 요일: 토요일");
+//        break;
+//        case 0 : document.write("당신의 생일은 무슨 요일: 일요일");
+//        break;
+//    }
+
+      var now = new Date();
+      var vac = new Date(2019,11,31);
+
+
+      var nowt = now.getTime();
+      var vact = vac.getTime();
+
+
+      var dday1 =  vact - nowt;
+      var dday2 = dday1 / ( 24*60*60*1000 ); 
+
+
+     var realDday = Math.ceil(dday2);
+     
+
+      document.write("D - day :"  +  realDday + "일 남았습니다.");
+      
+    
+    </script>
+
+  
+ 
+    
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>onload로 이미지 크기 출력</title>
+	<script>
+		function changeImage() {
+			//1. select 객체 가져오기 (id가 sel)
+			var sel = document.getElementById('sel');
+			//2 img 객체 가져오기 (id가 myImg)
+			var img = document.getElementById('myImg');
+			
+
+			//3.index 변수에 선택된 <option>의 인덱스값 넣기
+			var index = sel.selectedIndex;
+			//4. img의 src를 선택된 <option>의 value 속성으로 할당하기
+			img.src=sel.options[index].value;
+
+
+			img.onload = function () {
+				//5. span 객체 가져오기(id가 mySpan)
+				var span = document.getElementById('mySpan');
+				//6. span 객체의 innerHTML 을 img객체의 폭(width) x 높이(height)로 하기	
+				span.innerHTML=img.width+"x"+img.height;
+			}
+		}
+	</script>
+</head>
+
+<body onload="changeImage()">
+	<!-- 7.웹페이지 로드 직후부터 처음부터 선택된 option의 이미지, 크기 출력하기 -->
+	<h3>onload로 이미지 크기 출력</h3>
+	<hr>
+	<form>
+		<select id="sel" onchange="changeImage()">
+			<option value="https://data.ac-illust.com/data/thumbnails/66/660a4ab44bf3dd93d9968e3669267dc1_t.jpeg">사과
+			<option value="https://illustimage.com/photo/2412.png">바나나
+			<option value="https://previews.123rf.com/images/grgroup/grgroup1611/grgroup161104944/65340176-실루엣-망고와-줄기와-색상-및-벡터-일러스트-레이-션-leafs.jpg">망고
+		</select>
+		<span id="mySpan">이미지 크기 출력</span>
+	</form>
+	<p><img id="myImg" src="https://data.ac-illust.com/data/thumbnails/66/660a4ab44bf3dd93d9968e3669267dc1_t.jpeg"></p>
+</body>
+
+</html>

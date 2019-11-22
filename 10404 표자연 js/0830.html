@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function adder(a,b){
+        //     return a+b;
+        // }
+        // var adder = function sum(a,b){
+        //     return a+b;
+        // }
+        // var plus = adder;
+        // console.log(adder(10,20));
+        // console.log(plus(10,20));
+       //안됨 console.log(sum(10,20));
+
+       var a = parseInt(prompt("숫자 1을 입력하세요"));
+      var b = parseInt(prompt("숫자 2를 입력하세요"));
+       
+       var num = function (a,b){
+           if(a>b){
+               return a;
+           }
+           else if(a<b)
+           {
+               return b;
+           }
+           else {
+           return a,b;
+           }
+       };
+
+       document.write("큰수 = " + num(a,b));
+
+
+
+    </script>
+    
+</body>
+</html>
